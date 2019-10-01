@@ -16,7 +16,7 @@ The authors model cities as multiplex transport networks, basically undirected g
   * Define a cost per unit length for each transportation method, and for a given budget, see which method of transportation decreases commute time the most
 
 ## Potential Graphs
-
+![graph](https://github.com/jzerez/ComplexityScienceProject1/blob/master/reports/assets/potential_graph.PNG)
 
 ## Expected Results
 * If we plotted the average commute vs the average length of the path added per step we might expect to see a sigmoid-like graph where there is a turning point of  optimal way to add paths (adding more short paths vs fewer long paths)
