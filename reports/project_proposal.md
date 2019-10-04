@@ -1,6 +1,6 @@
 # Investigating Connectedness of Cities’ Transportation Networks
 ## Abstract
-In this project, we want to examine multilayer graphs that model transportation networks in cities. Primarily, we want to understand how adding additional connections both within layers and between layers can increase the connectedness of graph, and how increased connections could decrease the commute time between random nodes of the graph. We will investigate different methods of adding connections for a variety of different city types (car dominated, bike dominated, metro dominated, etc). The primary goal is to understand how modern cities can improve their transportation networks, and how bike networks in particular can be shown to be cost effective methods of improving the commutability of cities.
+In this project, we want to examine multilayer graphs that model transportation networks in cities. Primarily, we want to understand how adding additional connections within layer for bicycle transportation can increase the connectedness of graph, and how increased connections could decrease the commute time between random nodes of the graph. We will investigate different methods of adding connections for a bike transportation network based on real city street map data. The primary goal is to understand how modern cities can improve their transportation networks, and how bike networks in particular can be shown to be cost effective methods of improving the commutability of cities.
 
 ## Bibliography and Inspiration
 Luis Guillermo Natera Orozco1 , Federico Battiston1 , Gerardo Iñiguez1,2,3 , Michael Szell4,5*
@@ -11,12 +11,14 @@ The authors model cities as multiplex transport networks, basically undirected g
 * Recreate experiments carried out in the paper, namely:
   * Connect sections of the graph based on size
   * Connect sections of the graph based on proximity
+  * Compare these methods to randomly connecting nodes 
 * Extensions:
-  * Define a commute time per unit length of transportation method (between two randomly chosen points) and see how commute time changes as a function of length of transportation paths added
-  * Define a cost per unit length for each transportation method, and for a given budget, see which method of transportation decreases commute time the most
+  * Add in additional layers of transportation networks (ex: subways, cars, etc), and try to compute the fastest and most carbon friendly route between two random nodes of the graph given assumed speed and carbon emission per unit distance for each transportation method.
+  * Compare how adding to different transportation networks changes the average commute time and carbon emission
 
 ## Potential Graphs
 ![graph](https://github.com/jzerez/ComplexityScienceProject1/blob/master/reports/assets/potential_graph.PNG)
+![graph2](https://github.com/jzerez/ComplexityScienceProject1/blob/master/reports/assets/graph2.jpg)
 
 ## Expected Results
 * If we plotted the average commute vs the average length of the path added per step we might expect to see a sigmoid-like graph where there is a turning point of  optimal way to add paths (adding more short paths vs fewer long paths)
@@ -33,6 +35,6 @@ The authors model cities as multiplex transport networks, basically undirected g
 * Get access to the data they used for their networks
 * Make scaled-down models for testing
   * 50-100 node fragmented graphs
-  * Arrange graph based on distances, make it look like a city
+  * Arrange graph based on distances
   * Try to implement some fragment-connecting algorithms
   * Make graph analysis algorithms - path length, connectedness, can you get from path a to b
