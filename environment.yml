@@ -1,7 +1,11 @@
 name: BikeMap
+channels: 
+  - conda-forge
+  - defaults
 dependencies:
   - numpy
   - pandas
   - networkx
   - matplotlib
+  - osmnx
 
