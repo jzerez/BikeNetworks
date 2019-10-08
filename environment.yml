@@ -1,0 +1,7 @@
+name: BikeMap
+dependencies:
+  - numpy
+  - pandas
+  - networkx
+  - matplotlib
+
