@@ -28,7 +28,6 @@ Preliminarily we are seeing that the Largest to Closest (L2C) is adding much few
 ![Detroit Graph: Largest to Second Largest](./assets/detroit_L2S.PNG)
 ![Detroit Graph: Largest to Closest](./assets/detroit_L2C.PNG)
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ## Interpretation
 We can look at the responses of Directness and Connectedness that each method of creating additional edges generates. In this case, interpreting the data should be relatively easy, the best method of adding additional edges to a bicycle model will be one that has the most impact to directness and connectedness for the least amount of length of road added. It is not our place to determine what parameter should be held in higher regard, as that evaluation is likely going to be a function of many additional variables that are not captured in our model. Factors such as the geographic layout of the city, prevalence of additional transportation modes, and the willingness of the population to adopt cycling as a means of transportation are all important when considering what method of adding edges is “best”. Directness and connectedness are traits that are just generally considered good within a transportation network and offer a relatively consistent means of comparing methods.
