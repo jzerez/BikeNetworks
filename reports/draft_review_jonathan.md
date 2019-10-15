@@ -1,3 +1,6 @@
+Reviewing Nicholas Sherman's Report
+https://github.com/kdy304g/ComplexLizards-CA/blob/master/reports/draft_report.md
+
 1) **Question**: This team is trying to use cellular automata in order to replicate scale patterns observed on lizards. They are trying to understand some of the mechanisms behind the patterns observed in the scales of lizards. The team pretty effectively communicate the experiment that they try to replicate.
 
 2)  **Methodology**: I wish that the methodology was a bit more thoroughly explained. In particular, I wish I knew more about the specifics of how the cellular automata from the paper (The aforementioned 'Manukyan model'). The equation or table that relates number of neighbors to probability of changing color would be nice. I think that the team did a good job at pointing out limitations, namely how their hexagonal cells differed from a network of scales from a real lizard. For their second experiment (adding in the brown and white scales), it is really missing a lot of explanation for how the model was made and what rules it follows. There is almost no explanation for how they integrated the white and brown scales into the model.
