@@ -24,9 +24,12 @@ We implement these algorithms by defining a total amount of road to add (in mete
 
 ## Results
 ![Detroit Graph: Compiled](./images/Detroit_Compiled.png)
+
 For Connectedness, we are seeing that the L2C algorithm creates a completely connected graph adding only 20 km of road, whereas the L2S algorithm needs nearly 35 km of road to become connected. The random graph does not usefully add roads, and only slightly makes the graph more connected.
+
 ![Copenhagen Graph: Compiled](./images/Copenhagen_Compiled_edited.png)
 ![Manhattan Graph: Compiled](./images/Manhattan_Compiled.png)
+
 We ran the same Connectedness analysis for Copenhagen and Manhattan to both compare how the algorithms perform on different cities, and to look more bike-friendly cities like Copenhagen can become more connected. For Copenhagen we only added 5km of road because the clusters are generally closer together, and for run-time purposes.
 
 For Directness, we see that each algorithm generally follow the same trend shapes as the corresponding LCC graph. The exception to this is the behavior of the R2C algorithm, which performs better than even the L2S algorithm.
@@ -58,9 +61,11 @@ For a given threshold value, we can determine whether an individual will decide 
 As expected, as the total length of bicycle network increases, the threshold required for an individual to decide to bike becomes lower and lower. Also unsurprisingly, as paths are added, individuals threshold values on the extremes of the spectrum do not change their behavior as more and more bike paths are added. In general, the shape of the trend follows roughly the same trend as both Directness and Connectedness.
 
 ![Threshold Graph](./images/threshold2.png)
+
 This plot shows for each length of bike path added, and for a given threshold value, whether a commuter will bike or not. The dark purple color represents driving, and the yellow color represents biking. For most thresholds (ex: 0.5), adding more bike routes does not change whether a bike is taken or not.
 
 ![Threshold Colormap](./images/threshold.png)
+
 This plot shows the required threshold for someone to bike a route given the current state of the graph.
 
 
