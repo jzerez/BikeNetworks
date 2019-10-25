@@ -18,7 +18,7 @@ Original Amsterdam Graph
 ![Detroit Graph: Largest to Second Largest](./assets/detroit_L2S.PNG)
 ![Detroit Graph: Largest to Closest](./assets/detroit_L2C.PNG)
 
-We implement these algorithms by defining a total amount of road to add (in meters) and then the algorithms either added paths until the sum of added lengths exceeds the defined amount, or until the graph is completely connected. We measure the Directness $$\frac{L_{path}}{L_{crow}} $$ and Connectedness $$\frac{N_{LCC}}{N_{Total}} $$ at each step and plot the length of road added vs Directness and Connectedness. We also chose to only use the L2S, L2C, and R2C methods because the Closest Overall method takes a very long time to run for large cities.
+We implement these algorithms by defining a total amount of road to add (in meters) and then the algorithms either added paths until the sum of added lengths exceeds the defined amount, or until the graph is completely connected. We measure the Directness <img src="https://tex.s2cms.ru/svg/%5Cfrac%7BL_%7Bpath%7D%7D%7BL_%7Bcrow%7D%7D%20" alt="\frac{L_{path}}{L_{crow}} " /> and Connectedness $$\frac{N_{LCC}}{N_{Total}} $$ at each step and plot the length of road added vs Directness and Connectedness. We also chose to only use the L2S, L2C, and R2C methods because the Closest Overall method takes a very long time to run for large cities.
 
 ## Results
 ![Detroit Graph: Compiled](./images/Detroit_Compiled.png)
@@ -29,7 +29,7 @@ We ran the same Connectedness analysis for Copenhagen and Manhattan to both comp
 
 For Directness, we see that each algorithm generally follow the same trend shapes as the corresponding LCC graph. The exception to this is the behavior of the R2C algorithm, which performs better than even the L2S algorithm.
 
-![Detroit Graph: Compiled Directness](./images/Directness_detroit.png)
+![Detroit Graph: Compiled Directness](./images/directness_detroit.png)
 
 ## Interpretation
 The graphs show that, in general, the proposed L2C and L2S algorithms are much more effective at improving the Connectedness and Directness of bike transportation networks in cities, relative to randomly connecting components such as in the R2C algorithm. The L2C algorithm adds the paths most efficiently in terms of Connectedness, as it requires the least amount of road to achieve high levels of Connectedness (>90%). For Manhattan and Copenhagen, both the L2S and L2C algorithms have similar performance. They both solidly outperform randomly connecting nodes but don’t have much differentiation for initial rise in Connectedness. Our hypothesis for this behavior is that both Manhattan and Copenhagen have relatively short distances between their major clusters to begin with, so very often the second-largest subgraph is very close to the largest subgraph already, whereas Detroit has very spaced out subgraphs to begin with, so it is more effective to chain along the closest ones rather than jump across the city to connect larger subgraphs. It is interesting to note that the Manhattan R2C LCC graph did converge to complete by the end. We noticed this as an artifact of the randomness, sometimes the random graph would connect the largest nodes out of chance and that tends to snowball into more connected random graphs, but the initial slope of Connectedness vs invested roads is still very low and so not as effective as the other methods.
