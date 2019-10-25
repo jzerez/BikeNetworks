@@ -12,7 +12,9 @@ We began by collecting transportation network information for various different 
 The second method we calculate is Connectedness, which is measured as how many nodes exist in the largest weakly connected cluster (LCC) divided by the total number of nodes in the graph. This answers the question “how likely is it that I can reach the node I would like to go to”. We then create several algorithms to add edges to the bike network in the effort to increase these metrics with the least amount of added path length. The first method is the Largest-to-Second (L2S) algorithm. This algorithm finds all of the weakly connected subgraphs in the overall bike MiltiDiGraph and ranks them by size, then connects the largest subgraph to the second largest. Then it connects the second largest to the third largest and so on. Next is Largest-to-Closest (L2C) which finds and sorts the subgraphs then connects the largest one to the closest subgraph to it, then connects the second largest subgraph to the closest subgraph to it and so on. Next is Random-to-Closest (R2C) which connects a random subgraph to it’s closest graph, repeats for n number of desired edges to be added. Last is the Overall Closest algorithm which connects the closest subgraphs for n number of desired edges.
 
 Original Amsterdam Graph
+
 ![Amsterdam Original](https://github.com/jzerez/ComplexityScienceProject1/blob/master/reports/assets/amsterdam.PNG)
+
 ![Amsterdam Modified](https://github.com/jzerez/ComplexityScienceProject1/blob/master/reports/assets/amsterdam_L2S.PNG)
 
 ![Detroit Graph: Largest to Second Largest](./assets/detroit_L2S.PNG)
